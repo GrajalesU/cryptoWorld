@@ -9,7 +9,7 @@ export const USER_DEFAULT = {
 }
 
 const localUser = window.localStorage.getItem('user')
-
+// If user exists on local storage, set as user default
 const userState = localUser ? JSON.parse(localUser) : USER_DEFAULT
 
 export const reducer = (state, action) => {

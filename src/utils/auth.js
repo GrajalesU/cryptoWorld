@@ -2,6 +2,13 @@ import { createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPasswo
 
 import { auth } from '../firebase/firebaseConfig'
 
+/**
+ *
+ * @param {string} email
+ * @param {string} password
+ * @param {string} name
+ * @returns {boolean} true if register correctly and false if not
+ */
 export async function register (email, password, name) {
   try {
     await createUserWithEmailAndPassword(auth, email, password)
@@ -18,6 +25,12 @@ export async function register (email, password, name) {
   }
 }
 
+/**
+ *
+ * @param {string} email
+ * @param {string} password
+ * @returns return current user or error if something is wrong
+ */
 export async function LoginWithEmailAndPassword (email, password) {
   try {
     await signInWithEmailAndPassword(auth, email, password)
@@ -27,6 +40,10 @@ export async function LoginWithEmailAndPassword (email, password) {
   }
 }
 
+/**
+ *
+ * @returns return user or error if something is wrong
+ */
 export async function LoginWithGoogle () {
   const provider = new GoogleAuthProvider()
   try {

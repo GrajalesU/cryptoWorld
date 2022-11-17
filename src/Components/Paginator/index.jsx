@@ -1,9 +1,13 @@
 import './styles.scss'
+
 import React, { useEffect, useState } from 'react'
 
 export default function Paginator ({ setList }) {
   const [numberSelected, setNumberSelected] = useState(1)
 
+  /**
+   * Get 30 currencies per page, if user change the paginator to another number, this will give other currencies
+   */
   useEffect(() => {
     fetch(`https://api.coinlore.net/api/tickers/?start=${(numberSelected - 1) * 30}&limit=30`)
       .then(res => res.json())

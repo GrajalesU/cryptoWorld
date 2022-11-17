@@ -1,11 +1,14 @@
 import './styles.scss'
+
 import React from 'react'
 import { useDispatch, useUser } from '../../Context/user'
 import { useNavigate } from 'react-router-dom'
+
 export default function Header () {
   const user = useUser()
   const userDispatch = useDispatch()
   const navigate = useNavigate()
+
   return (
     <header className="Header">
       <button type='button' onClick={() => {

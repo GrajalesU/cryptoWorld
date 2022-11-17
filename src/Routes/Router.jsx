@@ -1,6 +1,6 @@
+import React from 'react'
 import { Route } from 'react-router'
 import { Routes } from 'react-router-dom'
-import React from 'react'
 import CryptoDetail from '../pages/CryptoDetail'
 import CryptoList from '../pages/CryptoList'
 import Login from '../pages/Login'
@@ -13,9 +13,9 @@ export default function Router () {
   return (
     <Routes>
         <Route path="/" element={
-        // <PrivateRoute isAuthenticated={user.name}>
+        <PrivateRoute isAuthenticated={user.name}>
           <CryptoList />
-        // </PrivateRoute>
+        </PrivateRoute>
         } />
         <Route path="/:id" element={
         <PrivateRoute isAuthenticated={user.name}>

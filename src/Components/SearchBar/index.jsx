@@ -1,11 +1,15 @@
 import './styles.scss'
+
 import React from 'react'
 
-export default function SearchBar ({ list, setList }) {
-  const originalList = [...list]
+export default function SearchBar ({ setList }) {
+  /**
+   *
+   * Sort the current list depending of the option selected
+   */
   const handleOption = (e) => {
     const selected = e.target.value
-    if (selected === 'no') return setList(originalList)
+    if (selected === 'no') return
     if (selected === 'price') {
       return setList(current => {
         const sortedList = current.sort((a, b) => {

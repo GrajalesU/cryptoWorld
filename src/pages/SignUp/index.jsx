@@ -1,7 +1,6 @@
 import './styles.scss'
 
 import React, { useState } from 'react'
-
 import { register } from '../../utils/auth'
 import { useDispatch } from '../../Context/user'
 import { useNavigate } from 'react-router-dom'

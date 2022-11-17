@@ -1,4 +1,5 @@
 import './styles.scss'
+
 import React, { useState } from 'react'
 import { LoginWithGoogle } from '../../../../utils/auth'
 import { useDispatch } from '../../../../Context/user'
@@ -8,6 +9,7 @@ export default function Social () {
   const [error, setError] = useState(undefined)
   const userDispatch = useDispatch()
   const navigate = useNavigate()
+
   const handleLogin = async () => {
     try {
       const response = await LoginWithGoogle()

@@ -1,4 +1,5 @@
 import './styles.scss'
+
 import React, { useState } from 'react'
 import Social from './components/Social'
 import { LoginWithEmailAndPassword } from '../../utils/auth'

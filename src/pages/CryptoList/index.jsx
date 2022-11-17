@@ -1,4 +1,5 @@
 import './styles.scss'
+
 import React, { useState } from 'react'
 import Paginator from '../../Components/Paginator'
 import SearchBar from '../../Components/SearchBar'
