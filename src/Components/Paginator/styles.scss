@@ -22,3 +22,14 @@
     gap: 5px;
   }
 }
+
+.Selected{
+  border-radius: 100%;
+  background: variables.$principal;
+  color: #fff;
+}
+
+.Unselected{
+  border: none;
+  background: transparent;
+}

@@ -13,18 +13,17 @@ export default function Router () {
   return (
     <Routes>
         <Route path="/" element={
-        <PrivateRoute isAuthenticated={user.name}>
+        // <PrivateRoute isAuthenticated={user.name}>
           <CryptoList />
-        </PrivateRoute>
+        // </PrivateRoute>
         } />
-        <Route path="/detail" element={
+        <Route path="/:id" element={
         <PrivateRoute isAuthenticated={user.name}>
           <CryptoDetail />
         </PrivateRoute>
         } />
         <Route path="/login" element={<Login />} />
         <Route path="/SignUp" element={<SignUp />} />
-        <Route path='*' element={<Login/>} />
     </Routes>
   )
 }
