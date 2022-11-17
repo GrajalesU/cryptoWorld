@@ -1,7 +1,7 @@
-import './styles.scss';
-import React from 'react';
+import './styles.scss'
+import React from 'react'
 
-export default function Paginator() {
+export default function Paginator () {
   return (
     <div className="Paginator">
       <button className="Paginator_Button material-icons">arrow_back_ios</button>
@@ -12,5 +12,5 @@ export default function Paginator() {
       </ul>
       <button className="Paginator_Button material-icons">arrow_forward_ios</button>
     </div>
-  );
+  )
 }

@@ -1,8 +1,8 @@
-import './styles.scss';
-import React from 'react';
-import Social from './components/Social';
+import './styles.scss'
+import React from 'react'
+import Social from './components/Social'
 
-export default function Login() {
+export default function Login () {
   return (
     <div className="Login">
       <div className="Login_Container">
@@ -28,5 +28,5 @@ export default function Login() {
         <Social />
       </div>
     </div>
-  );
+  )
 }

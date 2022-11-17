@@ -1,24 +1,24 @@
-import './styles.scss';
+import './styles.scss'
 
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 // import { register } from '../../utils/auth';
 
-export default function SignUp() {
-  const [currentUser, setCurrentUser] = useState({ name: '', password: '', email: '' });
+export default function SignUp () {
+  const [currentUser, setCurrentUser] = useState({ name: '', password: '', email: '' })
 
   const handleChange = (e) => {
-    const { value, id } = e.target;
+    const { value, id } = e.target
     setCurrentUser({
       ...currentUser,
-      [id]: value,
-    });
-  };
+      [id]: value
+    })
+  }
 
   const handleRegister = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     // register(currentUser.email, currentUser.password, currentUser.name);
-  };
+  }
   return (
     <div className="SignUp">
       <div className="SignUp_Container">
@@ -66,5 +66,5 @@ export default function SignUp() {
         </form>
       </div>
     </div>
-  );
+  )
 }

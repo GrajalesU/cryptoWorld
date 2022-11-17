@@ -1,7 +1,7 @@
-import './styles.scss';
-import React from 'react';
+import './styles.scss'
+import React from 'react'
 
-export default function SearchBar() {
+export default function SearchBar () {
   return (
     <div className="SearchBar">
       <div className="SearchBar_Container">
@@ -26,5 +26,5 @@ export default function SearchBar() {
         <button className="SearchBar_Button material-icons">search</button>
       </div>
     </div>
-  );
+  )
 }
