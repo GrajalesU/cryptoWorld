@@ -21,7 +21,9 @@ export default function Header () {
           userDispatch({ type: 'logout' })
         }}>
             <span className="Header_Login">
+              <span className='Header_Login_Name'>
               {user.name}
+              </span>
               <span className="material-icons">login</span>
             </span>
           </button>

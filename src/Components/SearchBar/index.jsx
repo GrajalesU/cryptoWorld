@@ -5,7 +5,6 @@ export default function SearchBar ({ list, setList }) {
   const originalList = [...list]
   const handleOption = (e) => {
     const selected = e.target.value
-    console.log(selected)
     if (selected === 'no') return setList(originalList)
     if (selected === 'price') {
       return setList(current => {

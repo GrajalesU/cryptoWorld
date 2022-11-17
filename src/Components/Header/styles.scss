@@ -32,5 +32,14 @@
     font-size: 16px;
     margin-right: 10px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &_Name{
+      width: 150px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
   }
 }
