@@ -1,0 +1,24 @@
+@use '../../sass/variables';
+
+.Paginator {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 20px;
+
+  &_Button {
+    background: variables.$light-principal;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0;
+    text-align: center;
+  }
+
+  &_List{
+    list-style: none;
+    display: flex;
+    gap: 5px;
+  }
+}

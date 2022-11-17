@@ -1,0 +1,30 @@
+@use '../../sass/variables';
+
+.Header {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: variables.$principal;
+  box-shadow: 1px 1px 20px 1px rgba(207, 207, 207, 1);
+  cursor: default;
+
+  &_Title,
+  &_Login {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+  }
+
+  &_Login {
+    font-weight: normal;
+    font-size: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,32 @@
+@use '../../../../sass/variables';
+.Social {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-inline: auto;
+  margin-bottom: 20px;
+
+  &_Text {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &_Buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_Google {
+      padding: 5px 10px;
+      background: variables.$light-principal;
+      color: #fff;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+
+      &:hover {
+        background: variables.$principal;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@use '../../sass/variables';
+
+.SearchBar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  &_Container {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  &_Filter {
+    background: variables.$light-principal;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    color: #fff;
+    padding-left: 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &_Input {
+    background: transparent;
+    border: none;
+    margin-inline: 10px;
+    min-width: 200px;
+    width: 60%;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &_Button {
+    background: variables.$light-principal;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+    &:hover {
+      background: variables.$principal;
+    }
+  }
+}

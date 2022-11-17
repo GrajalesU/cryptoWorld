@@ -1,0 +1,70 @@
+@use '../../sass/variables';
+
+.Detail {
+  min-height: 93vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &_Container {
+    background: #fff;
+    width: 90%;
+    box-shadow: 10px 15px 20px 1px rgba(207, 207, 207, 1);
+  }
+
+  &_Title {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+  }
+
+  &_Subtitle {
+    color: variables.$light-principal;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  &_Price {
+    display: flex;
+    width: 95%;
+    margin-inline: auto;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    margin-bottom: 20px;
+
+    &_Percentage {
+      color: #fff;
+      background: #000;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      padding: 5px;
+      border-radius: 5px;
+    }
+  }
+
+  &_Flex {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &_Details {
+    margin-left: 20px;
+
+    &_Name {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    &_USD {
+      margin-left: 5px;
+      color: variables.$light-principal;
+    }
+
+    &:last-child{
+      margin-bottom: 30px;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@use '../../sass/variables';
+
+.Login {
+  min-height: 93vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &_Container {
+    background: #fff;
+    width: 90%;
+    box-shadow: 10px 15px 20px 1px rgba(207, 207, 207, 1);
+  }
+
+  &_Title {
+    color: variables.$principal;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+
+  &_Form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+
+    &_Element {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-inline: 10%;
+      gap: 8px;
+
+      &_Label {
+        color: rgb(99, 99, 99);
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      &_Input {
+        border: 1px solid rgb(99, 99, 99);
+        padding: 5px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    &_Button {
+      width: 30%;
+      min-width: 150px;
+      align-self: center;
+      padding: 10px;
+      background: rgb(122, 122, 122);
+      border: 0;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-block: 10px;
+
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  &_Redirect {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    color: rgb(143, 143, 143);
+    margin-bottom: 10px;
+  }
+}
