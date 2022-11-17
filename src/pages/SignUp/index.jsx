@@ -2,22 +2,33 @@ import './styles.scss'
 
 import React, { useState } from 'react'
 
-// import { register } from '../../utils/auth';
+import { register } from '../../utils/auth'
+import { useDispatch } from '../../Context/user'
+import { useNavigate } from 'react-router-dom'
 
 export default function SignUp () {
-  const [currentUser, setCurrentUser] = useState({ name: '', password: '', email: '' })
+  const [user, setUser] = useState({ name: '', password: '', email: '' })
+  const [error, setError] = useState(undefined)
+  const userDispatch = useDispatch()
+  const navigate = useNavigate()
 
   const handleChange = (e) => {
     const { value, id } = e.target
-    setCurrentUser({
-      ...currentUser,
+    setUser({
+      ...user,
       [id]: value
     })
   }
 
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault()
-    // register(currentUser.email, currentUser.password, currentUser.name);
+    const isRegistered = await register(user.email, user.password, user.name)
+    if (isRegistered) {
+      userDispatch({ type: 'login', value: { name: user.name, email: user.email } })
+      navigate('/')
+    } else {
+      setError('Email already registered')
+    }
   }
   return (
     <div className="SignUp">
@@ -32,7 +43,7 @@ export default function SignUp () {
               className="SignUp_Form_Element_Input"
               type="text"
               id="name"
-              value={currentUser.name}
+              value={user.name}
               onChange={(e) => handleChange(e)}
             />
           </div>
@@ -44,7 +55,7 @@ export default function SignUp () {
               className="SignUp_Form_Element_Input"
               type="email"
               id="email"
-              value={currentUser.email}
+              value={user.email}
               onChange={(e) => handleChange(e)}
             />
           </div>
@@ -56,13 +67,14 @@ export default function SignUp () {
               className="SignUp_Form_Element_Input"
               type="password"
               id="password"
-              value={currentUser.password}
+              value={user.password}
               onChange={(e) => handleChange(e)}
             />
           </div>
           <button className="SignUp_Form_Button" type="submit">
             CREATE
           </button>
+          {error && <small className='Error'>{error}</small>}
         </form>
       </div>
     </div>

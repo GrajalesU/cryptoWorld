@@ -10,6 +10,12 @@
   box-shadow: 1px 1px 20px 1px rgba(207, 207, 207, 1);
   cursor: default;
 
+  > button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
   &_Title,
   &_Login {
     display: flex;
